@@ -20,7 +20,7 @@
     :root{
       --blue:#13a0d3;
       --orange:#f86200;
-      --bg:#eaf6fb;
+      --bg:#eaf6fb;     /* svetlomodré pozadie */
       --card:#ffffff;
       --text:#0b0b0b;
       --muted:#555;
@@ -52,7 +52,7 @@
       align-items:center;
       border:1px solid var(--border);
       margin-bottom:22px;
-      gap:20px;
+      gap:18px;
       flex-wrap:wrap;
     }
 
@@ -62,8 +62,9 @@
     .rightTop{
       display:flex;
       align-items:center;
-      gap:16px;
+      gap:14px;
       flex-wrap:wrap;
+      justify-content:flex-end;
     }
 
     .pill{
@@ -175,7 +176,7 @@
     .card p{
       margin:0;
       color:var(--muted);
-      line-height:1.6;
+      line-height:1.65;
     }
 
     .actions{
@@ -214,46 +215,44 @@
   <div class="top">
     <div>
       <b>RHFinancie – rýchly prehľad služieb</b>
-      <span>Vyber oblasť, zisti základné informácie a kontaktuj ma jedným klikom</span>
+      <span>Vyber oblasť, prečítaj si základ a kontaktuj ma jedným klikom</span>
     </div>
 
     <div class="rightTop">
       <div class="pill">📱 klikateľné • 🔗 verejný link</div>
 
-      <!-- SOCIALNE SIETE – UPRAV SI ODKAZY -->
+      <!-- SOCIALNE SIETE (tvoje linky) -->
       <div class="socials">
-  <a href="https://www.instagram.com/rhfinancie" target="_blank" title="Instagram – RHFinancie">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="https://facebook.com/allianzhojstric/" target="_blank" title="Facebook – RHFinancie">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-
-  <a href="https://www.linkedin.com/in/hojstric-richard" target="_blank" title="LinkedIn – Richard Hojstrič">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-
-  <a href="https://www.tiktok.com/@rhfinancie" target="_blank" title="TikTok – RHFinancie">
-    <i class="fab fa-tiktok"></i>
-  </a>
-</div>
+        <a href="https://www.instagram.com/rhfinancie" target="_blank" title="Instagram – RHFinancie">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/allianzhojstric/" target="_blank" title="Facebook – Allianz Hojstrič">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hojstric-richard" target="_blank" title="LinkedIn – Richard Hojstrič">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.tiktok.com/@rhfinancie" target="_blank" title="TikTok – RHFinancie">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
     </div>
   </div>
 
   <!-- GRID -->
   <div class="grid">
 
+    <!-- MENU -->
     <div class="panel">
       <h2>Služby</h2>
       <div class="menu">
         <button class="active" onclick="show('majetok')">🏠 Poistenie bývania<small>Dom, byt, domácnosť</small></button>
         <button onclick="show('cestovne')">✈️ Cestovné poistenie<small>Dovolenky, hory, športy</small></button>
         <button onclick="show('auto')">🚗 Auto – PZP / Havarijné<small>Ochrana vozidla</small></button>
-        <button onclick="show('zivot')">❤️ Životné poistenie<small>Príjem, rodina</small></button>
-        <button onclick="show('uvery')">💳 Úvery<small>Financovanie bývania</small></button>
-        <button onclick="show('refi')">🔄 Refinancovanie<small>Zníženie splátok</small></button>
-        <button onclick="show('invest')">📈 Investovanie<small>Zhodnocovanie peňazí</small></button>
+        <button onclick="show('zivot')">❤️ Životné poistenie<small>Príjem, rodina, záväzky</small></button>
+        <button onclick="show('uvery')">💳 Úvery<small>Financovanie bývania a plánov</small></button>
+        <button onclick="show('refi')">🔄 Refinancovanie<small>Zníženie splátok, lepšie podmienky</small></button>
+        <button onclick="show('invest')">📈 Investovanie<small>Dlhodobé zhodnocovanie</small></button>
         <button onclick="show('pilier')">🏦 II. a III. pilier<small>Dôchodok</small></button>
       </div>
     </div>
@@ -267,10 +266,10 @@
           <div class="card">
             <h3>🏠 Poistenie bývania</h3>
             <p>
-              Slúži na ochranu tvojho domu alebo bytu (stavba), vecí v domácnosti
-              a zároveň aj zodpovednosti za škody, ktoré môžeš neúmyselne spôsobiť iným
-              (napr. vytopenie suseda). Dôležité je správne nastavenie poistných súm,
-              aby nevzniklo podpoistenie.
+              Chráni tvoj <b>dom alebo byt</b> (stavbu/neh­nuteľnosť) a podľa nastavenia aj <b>domácnosť</b>
+              (veci vo vnútri – nábytok, elektronika, spotrebiče). Dôležitou súčasťou býva aj
+              <b>zodpovednosť</b> – napríklad keď vytopíš suseda alebo spôsobíš škodu niekomu inému.
+              Kľúčové je správne nastavenie poistných súm, aby nevzniklo podpoistenie.
             </p>
             <div class="actions">
               <a class="btn blue" href="https://wa.me/421910910993">WhatsApp</a>
@@ -283,9 +282,10 @@
           <div class="card">
             <h3>✈️ Cestovné poistenie</h3>
             <p>
-              Kryje najmä liečebné náklady v zahraničí, asistenčné služby,
-              úraz, zodpovednosť za škody a podľa nastavenia aj batožinu alebo storno cesty.
-              Rozdiel je medzi dovolenkou, lyžovačkou a športmi – tam je nastavenie kľúčové.
+              Najčastejšie kryje <b>liečebné náklady v zahraničí</b> (ošetrenie, hospitalizácia),
+              <b>asistenčné služby</b>, úraz a často aj <b>zodpovednosť za škodu</b>.
+              Podľa nastavenia vie riešiť aj <b>batožinu</b> alebo <b>storno cesty</b>.
+              Pri lyžovaní či športoch je dôležité, či sú kryté konkrétne aktivity.
             </p>
             <div class="actions">
               <a class="btn blue" href="https://wa.me/421910910993">WhatsApp</a>
@@ -298,9 +298,10 @@
           <div class="card">
             <h3>🚗 Auto – PZP / Havarijné poistenie</h3>
             <p>
-              PZP rieši škody, ktoré spôsobíš iným. Havarijné poistenie chráni tvoje auto
-              pri nehode, vandalizme, krádeži alebo živelných udalostiach.
-              Správna kombinácia oboch šetrí peniaze aj starosti.
+              <b>PZP</b> kryje škody, ktoré spôsobíš <b>iným</b> (majetok, zdravie).
+              <b>Havarijné poistenie</b> chráni <b>tvoje auto</b> – typicky pri nehode,
+              vandalizme, krádeži alebo živelných udalostiach (podľa balíka).
+              Správne nastavenie pomôže, aby ťa neprekvapili limity alebo spoluúčasť.
             </p>
             <div class="actions">
               <a class="btn blue" href="https://wa.me/421910910993">WhatsApp</a>
@@ -313,9 +314,9 @@
           <div class="card">
             <h3>❤️ Životné poistenie</h3>
             <p>
-              Slúži na ochranu príjmu, rodiny a záväzkov (napr. hypotéky).
-              Zameriava sa najmä na vážne udalosti – invaliditu, kritické choroby,
-              dlhodobú PN alebo úmrtie. Každý klient potrebuje iné nastavenie.
+              Zmysel dáva najmä vtedy, keď chceš ochrániť <b>rodinu, príjem a záväzky</b> (napr. hypotéku).
+              Bežne sa riešia veľké životné situácie ako <b>invalidita</b>, <b>kritické choroby</b>,
+              <b>dlhodobá PN</b> alebo úmrtie. Nastavenie sa vždy robí podľa tvojich priorít a rozpočtu.
             </p>
             <div class="actions">
               <a class="btn blue" href="https://wa.me/421910910993">WhatsApp</a>
@@ -328,9 +329,9 @@
           <div class="card">
             <h3>💳 Úvery</h3>
             <p>
-              Hypotekárne a spotrebné úvery podľa tvojej situácie.
-              Prejdeme si možnosti, limity, splátky a vyberieme riešenie,
-              ktoré je dlhodobo udržateľné, nie len „na papieri“.
+              Hypotekárne aj spotrebné riešenia podľa cieľa – bývanie, rekonštrukcia,
+              konsolidácia alebo iný plán. Prejdeme si <b>splátku</b>, <b>podmienky</b> a
+              hlavne to, aby bolo riešenie <b>dlhodobo udržateľné</b>, nie len „na prvý pohľad“.
             </p>
             <div class="actions">
               <a class="btn blue" href="https://wa.me/421910910993">WhatsApp</a>
@@ -343,9 +344,9 @@
           <div class="card">
             <h3>🔄 Refinancovanie</h3>
             <p>
-              Kontrola existujúcej hypotéky alebo úverov.
-              Cieľom je zníženie splátky, úroku alebo lepšie nastavenie fixácie.
-              Často sa oplatí riešiť ešte pred koncom fixácie.
+              Ak máš hypotéku alebo úver, dá sa často zlepšiť nastavenie – napríklad
+              <b>znižiť splátku</b>, zmeniť <b>fixáciu</b> alebo spojiť viac úverov do jedného.
+              Ideálne je riešiť to včas, aby si neplatil zbytočne viac, než musíš.
             </p>
             <div class="actions">
               <a class="btn blue" href="https://wa.me/421910910993">WhatsApp</a>
@@ -358,9 +359,9 @@
           <div class="card">
             <h3>📈 Investovanie</h3>
             <p>
-              Dlhodobé zhodnocovanie peňazí s cieľom poraziť infláciu.
-              Investovanie je vhodné na tvorbu rezervy, budovanie majetku
-              alebo prípravu na dôchodok. Dôležitý je horizont, riziko a pravidelnosť.
+              Investovanie je cesta, ako dlhodobo <b>zhodnocovať peniaze</b> a bojovať proti inflácii.
+              Nastavenie závisí od <b>horizontu</b>, <b>rizika</b> a cieľa (rezerva, majetok, dôchodok).
+              V praxi funguje najlepšie pravidelnosť a jasný plán.
             </p>
             <div class="actions">
               <a class="btn blue" href="https://wa.me/421910910993">WhatsApp</a>
@@ -373,9 +374,9 @@
           <div class="card">
             <h3>🏦 II. a III. pilier</h3>
             <p>
-              Doplnkové dôchodkové sporenie a II. pilier pomáhajú zvýšiť budúci dôchodok.
-              Záleží na správnom nastavení fondov, príspevkoch a čase.
-              Aj malé úpravy dnes môžu znamenať veľký rozdiel v budúcnosti.
+              II. a III. pilier pomáhajú zvýšiť budúci dôchodok.
+              Dôležité je, v akých <b>fondoch</b> si a či nastavenie sedí k tvojmu veku a cieľu.
+              Aj malé zmeny dnes môžu spraviť veľký rozdiel o 10–20 rokov.
             </p>
             <div class="actions">
               <a class="btn blue" href="https://wa.me/421910910993">WhatsApp</a>
